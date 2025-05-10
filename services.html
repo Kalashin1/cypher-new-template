@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | CryptoSphere</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-icon {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+    }
+
+    .coin-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .service-tab {
+      transition: all 0.3s ease;
+    }
+
+    .service-tab.active {
+      background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+      border-left: 4px solid #3b82f6;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="bg-gray-900/50 backdrop-blur-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <span class="text-2xl font-bold gradient-text">CryptoSphere</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <a href="#" class="text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+              <a href="#"
+                class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Investments</a>
+              <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">About</a>
+              <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-4 flex items-center md:ml-6">
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition">
+              Connect Wallet
+            </button>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <button type="button" id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="#" class="text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+        <a href="#"
+          class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Investments</a>
+        <a href="#" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#"
+          class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        <button
+          class="bg-gradient-to-r from-blue-500 to-purple-600 text-white w-full px-4 py-2 rounded-md text-base font-medium hover:opacity-90 transition mt-2">
+          Connect Wallet
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="pt-32 pb-20 bg-gradient-to-br from-blue-900/30 to-purple-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="coin-animation mb-8">
+        <i class="fas fa-concierge-bell text-6xl text-blue-400"></i>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Our <span class="gradient-text">Comprehensive Services</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        Discover the full range of blockchain-powered services designed to grow your digital wealth across multiple
+        asset classes.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <button
+          class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+          Get Started
+        </button>
+        <button
+          class="border border-blue-400 text-blue-400 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-400 hover:text-white transition">
+          <i class="fas fa-play mr-2"></i> Watch Demo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Navigation -->
+  <div class="bg-gray-900 py-8 sticky top-16 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex overflow-x-auto space-x-1 hide-scrollbar">
+        <button class="service-tab active px-6 py-3 rounded-md font-medium whitespace-nowrap" data-service="mining">
+          <i class="fas fa-mining-rig mr-2"></i> Mining Services
+        </button>
+        <button class="service-tab px-6 py-3 rounded-md font-medium whitespace-nowrap" data-service="real-estate">
+          <i class="fas fa-home mr-2"></i> Real Estate
+        </button>
+        <button class="service-tab px-6 py-3 rounded-md font-medium whitespace-nowrap" data-service="pharma">
+          <i class="fas fa-pills mr-2"></i> Pharma Research
+        </button>
+        <button class="service-tab px-6 py-3 rounded-md font-medium whitespace-nowrap" data-service="wealth">
+          <i class="fas fa-chart-line mr-2"></i> Wealth Management
+        </button>
+        <button class="service-tab px-6 py-3 rounded-md font-medium whitespace-nowrap" data-service="education">
+          <i class="fas fa-graduation-cap mr-2"></i> Education
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Content -->
+  <div class="py-16">
+    <!-- Mining Services -->
+    <section id="mining" class="service-section">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="gradient-text">Cryptocurrency Mining</span> Solutions
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Leverage our industrial-scale mining infrastructure to earn passive income from cryptocurrency.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-cloud text-2xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Cloud Mining</h3>
+            <p class="text-gray-400 mb-4">
+              Rent hash power from our global mining farms without the hassle of hardware maintenance.
+            </p>
+            <div class="mt-6">
+              <div class="flex justify-between text-sm text-gray-400 mb-1">
+                <span>Starting at</span>
+                <span class="font-medium">$100/month</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            <button
+              class="mt-6 w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition">
+              View Plans
+            </button>
+          </div>
+
+          <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-server text-2xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Hosting Services</h3>
+            <p class="text-gray-400 mb-4">
+              Professional hosting for your mining equipment in our state-of-the-art facilities.
+            </p>
+            <div class="mt-6">
+              <div class="flex justify-between text-sm text-gray-400 mb-1">
+                <span>Starting at</span>
+                <span class="font-medium">$2.50/kWh</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-purple-500 h-2 rounded-full" style="width: 70%"></div>
+              </div>
+            </div>
+            <button
+              class="mt-6 w-full border border-purple-400 text-purple-400 px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-400 hover:text-white transition">
+              Get Quote
+            </button>
+          </div>
+
+          <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-robot text-2xl text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">AI-Optimized Mining</h3>
+            <p class="text-gray-400 mb-4">
+              Our proprietary AI algorithms maximize your mining profitability 24/7.
+            </p>
+            <div class="mt-6">
+              <div class="flex justify-between text-sm text-gray-400 mb-1">
+                <span>Starting at</span>
+                <span class="font-medium">5% of profits</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+            <button
+              class="mt-6 w-full border border-green-400 text-green-400 px-4 py-2 rounded-md text-sm font-medium hover:bg-green-400 hover:text-white transition">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-8">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-2xl font-bold mb-2">Mining Pool Dashboard</h3>
+              <p class="text-gray-400">Real-time monitoring of our mining operations</p>
+            </div>
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+              Access Dashboard
+            </button>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+            <div class="text-center">
+              <div class="text-3xl font-bold gradient-text mb-2">14.7 EH/s</div>
+              <div class="text-gray-400">Hashrate</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold gradient-text mb-2">8,429</div>
+              <div class="text-gray-400">Active Miners</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold gradient-text mb-2">98.7%</div>
+              <div class="text-gray-400">Uptime</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold gradient-text mb-2">24h</div>
+              <div class="text-gray-400">Payout Cycle</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Estate Services -->
+    <section id="real-estate" class="service-section hidden py-16 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="gradient-text">Tokenized Real Estate</span> Investments
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Fractional ownership of premium properties through blockchain technology.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-gray-800 rounded-xl p-8">
+            <h3 class="text-2xl font-bold mb-6">Featured Properties</h3>
+            <div class="space-y-6">
+              <div class="flex items-start bg-gray-700/50 p-4 rounded-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                  alt="Luxury Villa" class="w-20 h-20 object-cover rounded-md mr-4">
+                <div>
+                  <h4 class="font-bold mb-1">Miami Beach Villa</h4>
+                  <p class="text-gray-400 text-sm mb-2">Tokenized value: $4.2M (4,200 tokens @ $1,000 each)</p>
+                  <div class="flex items-center text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt ml-1"></i>
+                    <span class="text-gray-400 ml-2">87% funded</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start bg-gray-700/50 p-4 rounded-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                  alt="Commercial Building" class="w-20 h-20 object-cover rounded-md mr-4">
+                <div>
+                  <h4 class="font-bold mb-1">Austin Office Tower</h4>
+                  <p class="text-gray-400 text-sm mb-2">Tokenized value: $12.5M (12,500 tokens @ $1,000 each)</p>
+                  <div class="flex items-center text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star ml-1"></i>
+                    <span class="text-gray-400 ml-2">63% funded</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start bg-gray-700/50 p-4 rounded-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+                  alt="Residential Complex" class="w-20 h-20 object-cover rounded-md mr-4">
+                <div>
+                  <h4 class="font-bold mb-1">Denver Apartment Complex</h4>
+                  <p class="text-gray-400 text-sm mb-2">Tokenized value: $8.9M (8,900 tokens @ $1,000 each)</p>
+                  <div class="flex items-center text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star ml-1"></i>
+                    <span class="text-gray-400 ml-2">100% funded</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-xl p-8">
+            <h3 class="text-2xl font-bold mb-6">Investment Benefits</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-hand-holding-usd text-blue-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Passive Income</h4>
+                  <p class="text-gray-400">
+                    Earn monthly rental income distributed proportionally to your token holdings.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-chart-line text-purple-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Appreciation Potential</h4>
+                  <p class="text-gray-400">
+                    Benefit from property value appreciation when the asset is sold.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-globe text-green-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Global Diversification</h4>
+                  <p class="text-gray-400">
+                    Build a diversified real estate portfolio across different markets and property types.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-lock text-yellow-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Secure Ownership</h4>
+                  <p class="text-gray-400">
+                    Blockchain technology ensures transparent and immutable ownership records.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-8">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-2xl font-bold mb-2">Ready to Invest in Real Estate?</h3>
+              <p class="text-gray-400">Start with as little as $1,000 and build your property portfolio</p>
+            </div>
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+              Browse Properties
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pharma Research Services -->
+    <section id="pharma" class="service-section hidden py-16 bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="gradient-text">Pharmaceutical Research</span> Investments
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Invest in groundbreaking medical research and share in the profits of successful drug developments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-gray-700 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-vial text-2xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Pre-Clinical Research</h3>
+            <p class="text-gray-400 mb-4">
+              Invest in promising drug candidates before they enter human trials.
+            </p>
+            <div class="mt-6">
+              <div class="text-sm text-gray-400 mb-2">Potential ROI: 5-10x</div>
+              <div class="text-sm text-gray-400 mb-2">Risk Level: High</div>
+              <div class="text-sm text-gray-400">Avg. Duration: 2-4 years</div>
+            </div>
+          </div>
+
+          <div class="bg-gray-700 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-clipboard-check text-2xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Clinical Trials</h3>
+            <p class="text-gray-400 mb-4">
+              Fund Phase 1-3 clinical trials for drugs with proven potential.
+            </p>
+            <div class="mt-6">
+              <div class="text-sm text-gray-400 mb-2">Potential ROI: 3-7x</div>
+              <div class="text-sm text-gray-400 mb-2">Risk Level: Medium</div>
+              <div class="text-sm text-gray-400">Avg. Duration: 3-7 years</div>
+            </div>
+          </div>
+
+          <div class="bg-gray-700 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-pills text-2xl text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Commercialization</h3>
+            <p class="text-gray-400 mb-4">
+              Invest in FDA-approved drugs entering the market.
+            </p>
+            <div class="mt-6">
+              <div class="text-sm text-gray-400 mb-2">Potential ROI: 1.5-3x</div>
+              <div class="text-sm text-gray-400 mb-2">Risk Level: Low</div>
+              <div class="text-sm text-gray-400">Avg. Duration: 5-10 years</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-700 rounded-xl p-8">
+          <h3 class="text-2xl font-bold mb-6 text-center">Current Research Opportunities</h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-600">
+              <thead>
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Therapy
+                    Area</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Drug Name
+                  </th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Phase</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Funding
+                  </th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Action</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-600">
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Oncology</td>
+                  <td class="px-6 py-4 whitespace-nowrap">OncoBlock-47</td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span class="px-2 py-1 text-xs rounded-full bg-blue-900 text-blue-300">Phase 2</span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="w-full bg-gray-600 rounded-full h-2">
+                      <div class="bg-blue-500 h-2 rounded-full" style="width: 65%"></div>
+                    </div>
+                    <div class="text-xs text-gray-400 mt-1">65% funded</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <button class="text-blue-400 hover:text-blue-300 text-sm font-medium">Invest</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Neurology</td>
+                  <td class="px-6 py-4 whitespace-nowrap">NeuroStabil</td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span class="px-2 py-1 text-xs rounded-full bg-purple-900 text-purple-300">Phase 3</span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="w-full bg-gray-600 rounded-full h-2">
+                      <div class="bg-purple-500 h-2 rounded-full" style="width: 92%"></div>
+                    </div>
+                    <div class="text-xs text-gray-400 mt-1">92% funded</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <button class="text-blue-400 hover:text-blue-300 text-sm font-medium">Invest</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">Rare Diseases</td>
+                  <td class="px-6 py-4 whitespace-nowrap">GeneThera-9</td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span class="px-2 py-1 text-xs rounded-full bg-green-900 text-green-300">Pre-Clinical</span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="w-full bg-gray-600 rounded-full h-2">
+                      <div class="bg-green-500 h-2 rounded-full" style="width: 35%"></div>
+                    </div>
+                    <div class="text-xs text-gray-400 mt-1">35% funded</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <button class="text-blue-400 hover:text-blue-300 text-sm font-medium">Invest</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="text-center mt-6">
+            <button
+              class="border border-blue-400 text-blue-400 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-400 hover:text-white transition">
+              View All Research Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wealth Management Services -->
+    <section id="wealth" class="service-section hidden py-16 bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="gradient-text">Wealth Management</span> Services
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Personalized investment strategies combining traditional and digital assets.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-gray-800 rounded-xl p-8">
+            <h3 class="text-2xl font-bold mb-6">Our Approach</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-user-tie text-blue-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Personalized Strategy</h4>
+                  <p class="text-gray-400">
+                    Each portfolio is tailored to your financial goals, risk tolerance, and time horizon.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-robot text-purple-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">AI-Powered Insights</h4>
+                  <p class="text-gray-400">
+                    Our algorithms continuously analyze market conditions to optimize your portfolio.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-balance-scale text-green-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Diversification</h4>
+                  <p class="text-gray-400">
+                    Strategic allocation across crypto, real estate, pharma, and traditional assets.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-shield-alt text-yellow-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Risk Management</h4>
+                  <p class="text-gray-400">
+                    Sophisticated hedging strategies to protect your capital during market downturns.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-xl p-8">
+            <h3 class="text-2xl font-bold mb-6">Service Tiers</h3>
+            <div class="space-y-6">
+              <div class="bg-gray-700/50 p-6 rounded-lg">
+                <div class="flex justify-between items-center mb-4">
+                  <h4 class="font-bold text-lg">Essential</h4>
+                  <span class="text-blue-400 font-bold">$10,000+</span>
+                </div>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 text-xs mt-1 mr-2"></i>
+                    <span>Automated portfolio management</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 text-xs mt-1 mr-2"></i>
+                    <span>Quarterly rebalancing</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-blue-400 text-xs mt-1 mr-2"></i>
+                    <span>Email support</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-gray-700/50 p-6 rounded-lg">
+                <div class="flex justify-between items-center mb-4">
+                  <h4 class="font-bold text-lg">Premium</h4>
+                  <span class="text-purple-400 font-bold">$100,000+</span>
+                </div>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-purple-400 text-xs mt-1 mr-2"></i>
+                    <span>All Essential features plus:</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-purple-400 text-xs mt-1 mr-2"></i>
+                    <span>Monthly rebalancing</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-purple-400 text-xs mt-1 mr-2"></i>
+                    <span>Dedicated advisor</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-purple-400 text-xs mt-1 mr-2"></i>
+                    <span>Priority support</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-gray-700/50 p-6 rounded-lg">
+                <div class="flex justify-between items-center mb-4">
+                  <h4 class="font-bold text-lg">Private</h4>
+                  <span class="text-green-400 font-bold">$1M+</span>
+                </div>
+                <ul class="space-y-2 text-gray-400 text-sm">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 text-xs mt-1 mr-2"></i>
+                    <span>All Premium features plus:</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 text-xs mt-1 mr-2"></i>
+                    <span>Custom investment vehicles</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 text-xs mt-1 mr-2"></i>
+                    <span>24/7 concierge</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-400 text-xs mt-1 mr-2"></i>
+                    <span>Exclusive opportunities</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-8">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-2xl font-bold mb-2">Ready to Grow Your Wealth?</h3>
+              <p class="text-gray-400">Schedule a consultation with our wealth management team</p>
+            </div>
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+              Book Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Services -->
+    <section id="education" class="service-section hidden py-16 bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="gradient-text">Education</span> Hub
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive learning resources to help you navigate the world of blockchain investments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="bg-gray-700 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-video text-2xl text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Video Courses</h3>
+            <p class="text-gray-400 mb-4">
+              Structured learning paths from beginner to advanced levels.
+            </p>
+            <div class="mt-6">
+              <div class="text-sm text-gray-400 mb-2">100+ hours of content</div>
+              <div class="text-sm text-gray-400">New lessons added weekly</div>
+            </div>
+            <button
+              class="mt-6 w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition">
+              Browse Courses
+            </button>
+          </div>
+
+          <div class="bg-gray-700 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-chalkboard-teacher text-2xl text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Live Webinars</h3>
+            <p class="text-gray-400 mb-4">
+              Interactive sessions with industry experts and analysts.
+            </p>
+            <div class="mt-6">
+              <div class="text-sm text-gray-400 mb-2">Weekly live events</div>
+              <div class="text-sm text-gray-400">Recordings available</div>
+            </div>
+            <button
+              class="mt-6 w-full border border-purple-400 text-purple-400 px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-400 hover:text-white transition">
+              View Schedule
+            </button>
+          </div>
+
+          <div class="bg-gray-700 rounded-xl p-8 transition-all duration-300 card-hover">
+            <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-book text-2xl text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Research Library</h3>
+            <p class="text-gray-400 mb-4">
+              In-depth reports, whitepapers, and market analysis.
+            </p>
+            <div class="mt-6">
+              <div class="text-sm text-gray-400 mb-2">500+ research documents</div>
+              <div class="text-sm text-gray-400">Updated daily</div>
+            </div>
+            <button
+              class="mt-6 w-full border border-green-400 text-green-400 px-4 py-2 rounded-md text-sm font-medium hover:bg-green-400 hover:text-white transition">
+              Access Library
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-gray-700 rounded-xl p-8">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0">
+              <h3 class="text-2xl font-bold mb-2">CryptoSphere Certification Program</h3>
+              <p class="text-gray-400">Earn recognized credentials in blockchain investing</p>
+            </div>
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          What Our <span class="gradient-text">Clients Say</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Hear from investors who have grown their wealth with our services.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-xl p-8">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah J."
+              class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Sarah J.</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-400 mb-6">
+            "The cloud mining service has been a game-changer for me. I'm earning consistent returns without any
+            technical knowledge required. The dashboard makes it easy to track my earnings."
+          </p>
+          <div class="text-sm text-gray-500">
+            <i class="fas fa-calendar-alt mr-2"></i> Mining client since 2021
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-8">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T."
+              class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Michael T.</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-400 mb-6">
+            "As a real estate investor, I was skeptical about tokenization at first. But CryptoSphere made the process
+            seamless. I now own fractions of properties across three countries with minimal paperwork."
+          </p>
+          <div class="text-sm text-gray-500">
+            <i class="fas fa-calendar-alt mr-2"></i> Real estate investor since 2020
+          </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-xl p-8">
+          <div class="flex items-center mb-6">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K."
+              class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold">Priya K.</h4>
+              <div class="flex text-yellow-400 text-sm">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-gray-400 mb-6">
+            "The wealth management team helped me diversify my crypto holdings into more stable assets. Their tax
+            optimization strategies alone have saved me thousands this year."
+          </p>
+          <div class="text-sm text-gray-500">
+            <i class="fas fa-calendar-alt mr-2"></i> Wealth management client since 2022
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <div class="py-16 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Ready to <span class="gradient-text">Get Started</span>?
+      </h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+        Join thousands of investors growing their wealth through our blockchain-powered services.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <button
+          class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+          Create Account
+        </button>
+        <button
+          class="border border-blue-400 text-blue-400 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-400 hover:text-white transition">
+          Contact Sales
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h3 class="text-xl font-bold gradient-text mb-4">CryptoSphere</h3>
+          <p class="text-gray-400 mb-4">
+            The premier platform for blockchain-powered investments in cryptocurrency, real estate, and pharmaceuticals.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-discord"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-medium"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Crypto Mining</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Real Estate</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Pharmaceuticals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Wealth Management</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Education</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Research</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Market Reports</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">API Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Help Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Press</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Legal</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 mb-4 md:mb-0">
+            &copy; 2023 CryptoSphere. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-blue-400 text-sm">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 text-sm">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 text-sm">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Service tabs functionality
+    const serviceTabs = document.querySelectorAll('.service-tab');
+    const serviceSections = document.querySelectorAll('.service-section');
+
+    serviceTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        serviceTabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        // Hide all sections
+        serviceSections.forEach(section => section.classList.add('hidden'));
+        // Show selected section
+        const targetSection = document.getElementById(tab.dataset.service);
+        if (targetSection) {
+          targetSection.classList.remove('hidden');
+        }
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

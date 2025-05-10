@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | CryptoSphere</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-icon {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+    }
+
+    .coin-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .service-tab {
+      transition: all 0.3s ease;
+    }
+
+    .service-tab.active {
+      background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+      border-left: 4px solid #3b82f6;
+    }
+
+    .contact-form-input {
+      background-color: rgba(30, 41, 59, 0.5);
+      border: 1px solid #334155;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+
+    .map-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+      border-radius: 0.75rem;
+    }
+
+    .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="bg-gray-900/50 backdrop-blur-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <span class="text-2xl font-bold gradient-text">CryptoSphere</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <a href="#"
+                class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+              <a href="#"
+                class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Investments</a>
+              <a href="#" class="text-gray-300 hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium">About</a>
+              <a href="#" class="text-blue-400 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-4 flex items-center md:ml-6">
+            <button
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition">
+              Connect Wallet
+            </button>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <button type="button" id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="#"
+          class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+        <a href="#"
+          class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Investments</a>
+        <a href="#" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#" class="text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+        <button
+          class="bg-gradient-to-r from-blue-500 to-purple-600 text-white w-full px-4 py-2 rounded-md text-base font-medium hover:opacity-90 transition mt-2">
+          Connect Wallet
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero Section -->
+  <div class="pt-32 pb-20 bg-gradient-to-br from-blue-900/30 to-purple-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="coin-animation mb-8">
+        <i class="fas fa-headset text-6xl text-blue-400"></i>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="gradient-text">Contact Us</span> Today
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+        Our team is ready to answer your questions and help you navigate the world of blockchain investments.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="#contact-form"
+          class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+          Send Message
+        </a>
+        <button
+          class="border border-blue-400 text-blue-400 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-400 hover:text-white transition">
+          <i class="fas fa-phone-alt mr-2"></i> Call Support
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Info Section -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Support Card -->
+        <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover contact-card">
+          <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-headset text-2xl text-blue-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Customer Support</h3>
+          <p class="text-gray-400 mb-6">
+            Our dedicated support team is available 24/7 to assist you with any questions or issues.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-start">
+              <i class="fas fa-phone-alt text-blue-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Support Hotline</p>
+                <p class="text-white">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-blue-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Email Support</p>
+                <p class="text-white">support@cryptosphere.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fab fa-telegram text-blue-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Telegram Support</p>
+                <p class="text-white">@CryptoSphereSupport</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Office Card -->
+        <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover contact-card">
+          <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-building text-2xl text-purple-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Our Offices</h3>
+          <p class="text-gray-400 mb-6">
+            Visit us at one of our global offices for in-person consultations and meetings.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-start">
+              <i class="fas fa-map-marker-alt text-purple-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Headquarters</p>
+                <p class="text-white">200 Blockchain Ave, San Francisco, CA 94107</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-map-marker-alt text-purple-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">European Office</p>
+                <p class="text-white">Crypto Plaza 42, Zug, Switzerland 6300</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-map-marker-alt text-purple-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Asia Office</p>
+                <p class="text-white">1 Marina Blvd, Singapore 018989</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Card -->
+        <div class="bg-gray-800 rounded-xl p-8 transition-all duration-300 card-hover contact-card">
+          <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-handshake text-2xl text-green-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">Business Inquiries</h3>
+          <p class="text-gray-400 mb-6">
+            For partnership opportunities, media requests, or enterprise solutions.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-green-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Partnerships</p>
+                <p class="text-white">partners@cryptosphere.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-green-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Media & Press</p>
+                <p class="text-white">press@cryptosphere.com</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-green-400 mt-1 mr-3"></i>
+              <div>
+                <p class="text-gray-400 text-sm">Enterprise</p>
+                <p class="text-white">enterprise@cryptosphere.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Map Section -->
+  <section id="contact-form" class="py-16 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-gray-900 rounded-xl p-8">
+          <h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
+          <p class="text-gray-400 mb-8">
+            Fill out the form below and our team will get back to you within 24 hours.
+          </p>
+
+          <form id="contactForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="first-name" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
+                <input type="text" id="first-name" name="first-name" required
+                  class="w-full px-4 py-3 rounded-lg contact-form-input focus:outline-none">
+              </div>
+              <div>
+                <label for="last-name" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required
+                  class="w-full px-4 py-3 rounded-lg contact-form-input focus:outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 rounded-lg contact-form-input focus:outline-none">
+            </div>
+
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+              <select id="subject" name="subject" required
+                class="w-full px-4 py-3 rounded-lg contact-form-input focus:outline-none">
+                <option value="" disabled selected>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="investment">Investment Questions</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+              <textarea id="message" name="message" rows="5" required
+                class="w-full px-4 py-3 rounded-lg contact-form-input focus:outline-none"></textarea>
+            </div>
+
+            <div class="flex items-center">
+              <input type="checkbox" id="consent" name="consent" required
+                class="h-4 w-4 rounded contact-form-input focus:ring-blue-500">
+              <label for="consent" class="ml-2 block text-sm text-gray-300">
+                I agree to CryptoSphere's <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a> and <a
+                  href="#" class="text-blue-400 hover:underline">Terms of Service</a>
+              </label>
+            </div>
+
+            <div>
+              <button type="submit"
+                class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+                Send Message <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Map and FAQ -->
+        <div class="space-y-8">
+          <!-- Map -->
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Find Our Headquarters</h3>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.040124041689!2d-122.3985439240164!3d37.78997177189945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858062b3d3a761%3A0x3b3296f7e2a665b1!2s200%20Blockchain%20Ave%2C%20San%20Francisco%2C%20CA%2094107%2C%20USA!5e0!3m2!1sen!2s!4v1689876543210!5m2!1sen!2s"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div class="bg-gray-900 rounded-xl p-6">
+            <h3 class="text-2xl font-bold mb-4">Frequently Asked Questions</h3>
+            <div class="space-y-4">
+              <div class="border-b border-gray-700 pb-4">
+                <button class="faq-toggle flex justify-between items-center w-full text-left focus:outline-none">
+                  <span class="font-medium text-gray-300">How quickly can I expect a response?</span>
+                  <i class="fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden mt-2 text-gray-400">
+                  Our support team typically responds within 24 hours for general inquiries. Urgent matters are
+                  prioritized and usually receive a response within 4-6 hours.
+                </div>
+              </div>
+
+              <div class="border-b border-gray-700 pb-4">
+                <button class="faq-toggle flex justify-between items-center w-full text-left focus:outline-none">
+                  <span class="font-medium text-gray-300">What information should I include in my message?</span>
+                  <i class="fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden mt-2 text-gray-400">
+                  Please include your full name, contact information, and as many details as possible about your
+                  inquiry. For technical issues, include screenshots and steps to reproduce the problem.
+                </div>
+              </div>
+
+              <div class="border-b border-gray-700 pb-4">
+                <button class="faq-toggle flex justify-between items-center w-full text-left focus:outline-none">
+                  <span class="font-medium text-gray-300">Do you offer phone support?</span>
+                  <i class="fas fa-chevron-down text-blue-400 transition-transform duration-300"></i>
+                </button>
+                <div class="faq-content hidden mt-2 text-gray-400">
+                  Yes, our phone support is available 24/7 for premium members and during business hours for all other
+                  clients. Call +1 (555) 123-4567 to speak with a representative.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Meet Our <span class="gradient-text">Support Team</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Our dedicated professionals are here to ensure you have the best experience with CryptoSphere.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div class="bg-gray-800 rounded-xl p-8 text-center transition-all duration-300 card-hover">
+          <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson"
+            class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-blue-500/30">
+          <h3 class="text-xl font-bold mb-2">Sarah Johnson</h3>
+          <p class="text-blue-400 mb-4">Head of Customer Support</p>
+          <p class="text-gray-400 mb-6">
+            With 8 years in blockchain customer service, Sarah ensures all client inquiries are handled with care and
+            expertise.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="bg-gray-800 rounded-xl p-8 text-center transition-all duration-300 card-hover">
+          <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="Michael Chen"
+            class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-purple-500/30">
+          <h3 class="text-xl font-bold mb-2">Michael Chen</h3>
+          <p class="text-purple-400 mb-4">Technical Support Lead</p>
+          <p class="text-gray-400 mb-6">
+            Michael brings 10+ years of technical expertise in blockchain infrastructure to solve even the most complex
+            issues.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="text-gray-400 hover:text-purple-400"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-gray-400 hover:text-purple-400"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-purple-400"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="bg-gray-800 rounded-xl p-8 text-center transition-all duration-300 card-hover">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel"
+            class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-green-500/30">
+          <h3 class="text-xl font-bold mb-2">Priya Patel</h3>
+          <p class="text-green-400 mb-4">Investment Support Specialist</p>
+          <p class="text-gray-400 mb-6">
+            Priya helps clients navigate investment opportunities with her deep knowledge of crypto markets and
+            portfolio strategies.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-gray-400 hover:text-green-400"><i class="fab fa-medium"></i></a>
+            <a href="#" class="text-gray-400 hover:text-green-400"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <div class="py-16 bg-gradient-to-br from-blue-900/50 to-purple-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Still Have <span class="gradient-text">Questions</span>?
+      </h2>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+        Check out our comprehensive knowledge base or join our community for real-time discussions.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <button
+          class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:opacity-90 transition">
+          Visit Help Center
+        </button>
+        <button
+          class="border border-blue-400 text-blue-400 px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-400 hover:text-white transition">
+          Join Community
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <h3 class="text-xl font-bold gradient-text mb-4">CryptoSphere</h3>
+          <p class="text-gray-400 mb-4">
+            The premier platform for blockchain-powered investments in cryptocurrency, real estate, and pharmaceuticals.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-telegram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-discord"></i></a>
+            <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-medium"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Crypto Mining</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Real Estate</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Pharmaceuticals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Wealth Management</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Education</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Blog</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Research</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Market Reports</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">API Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Help Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-bold mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">About Us</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Careers</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Press</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Legal</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-blue-400">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-400 mb-4 md:mb-0">
+            &copy; 2023 CryptoSphere. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-blue-400 text-sm">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 text-sm">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-blue-400 text-sm">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-toggle').forEach(toggle => {
+      toggle.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('i');
+
+        // Toggle content visibility
+        content.classList.toggle('hidden');
+
+        // Rotate icon
+        if (content.classList.contains('hidden')) {
+          icon.classList.remove('rotate-180');
+        } else {
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Here you would normally send the form data to your server
+      // For this example, we'll just show a success message
+
+      alert('Thank you for your message! Our team will get back to you within 24 hours.');
+      this.reset();
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobile-menu');
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
